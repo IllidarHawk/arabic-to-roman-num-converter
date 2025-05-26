@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #3b1f1f;
+}
+
+.container, .title {
+  min-width: 300px;
+  width: 60%;
+  max-width: 450px;
+  margin-inline: auto;
+}
+
+.title {
+  padding: 15px 5px;
+  margin-block: 180px 0px;
+  font-family: Tagesschrift;
+  color: #FFD700;
+  line-height: 40px; 
+}
+
+.title > #from-to {
+  font-size: 3rem;
+}
+
+.title > #functionality {
+  font-size: 1.5rem;
+}
+
+.input.container {
+  margin-block: 30px 40px;
+  padding: 30px 0 35px;
+  background: beige;
+  border: 3px solid #FFD700;
+  border-radius: 5px;
+}
+
+label {
+  color: #2f2f2f;
+  font-family: Kanchenjunga;
+  font-size: 18px;
+}
+
+input#number {
+  display: block;
+  width: 48%;
+  margin: 10px auto 25px;
+  background-color: beige;
+  border: 0;
+  border-bottom: 1px solid;
+}
+
+button {
+  width: 50%;
+  padding: 5px 0 7px;
+  font-family: Kanchenjunga;
+  font-size: inherit;
+  color: #2f2f2f;
+  background: linear-gradient(white, #FFC200 90%);
+  border: 1px solid #FFC300
+}
+
+.down-arrow {
+  margin-inline: auto;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 30px solid beige;
+}
+
+.output.container {
+  margin-block: 35px;
+  padding: 5px 15px;
+  max-width: 470px;
+  background-color: #FFC300;
+  font-family: Kanchenjunga;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  box-shadow: 0px 0px 3px beige;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(white, #FFC300 70%);
+}
