@@ -48,6 +48,7 @@ input#number {
   display: block;
   width: 48%;
   margin: 10px auto 25px;
+  padding: 5px;
   background-color: beige;
   border: 0;
   border-bottom: 1px solid;
