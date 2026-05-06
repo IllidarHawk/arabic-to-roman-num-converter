@@ -48,45 +48,60 @@ function arabicToRoman() {
 }
 
 
-// Function: Converter
+// Converter
 function converter (input) {
   let times;
   let remainder;
+
+  // Base case
+  if (input == 0) {
+    return "";
+  }
   
-  if (input === 1) {
+  // Recursions
+  if (input == 1) {
     return "I";
-  } else if (input === 4) {
+  } else if (input == 4) {
     return "IV";
-  } else if (input === 5) {
+  } else if (input == 5) {
     return "V";
-  } else if (input === 9) {
+  } else if (input == 9) {
     return "IX";
-  } else if (input === 10) {
+  } else if (input == 10) {
     return "X";
   } else {
     if (input < 10) {
       return converter(input - 1) + "I";
-    } else if (input > 10 && input < 40) {
+    } 
+    else if (input >= 10 && input < 40) {
       times = input / 10;
       remainder = input % 10;
       return "X".repeat(times) + converter(remainder);
-    } else if (input < 50) {
+    } 
+    else if (input < 50) {
       return "XL" + converter(input - 40);
-    } else if (input < 90) {
+    } 
+    else if (input < 90) {
       return "L" + converter(input - 50);
-    } else if (input < 100) {
+    } 
+    else if (input < 100) {
       return "XC" + converter(input - 90); 
-    } else if (input < 400) {
+    } 
+    else if (input < 400) {
       times = input / 100;
       remainder = input % 100;
       return "C".repeat(times) + converter(remainder);
-    } else if (input < 500) {
+    } 
+    else if (input < 500) {
       return "CD" + converter(input - 400);
-    } else if (input < 900) {
+    } 
+    else if (input < 900) {
       return "D" + converter(input - 500);
-    } else if (input < 1000) {
+    } 
+    else if (input < 1000) {
       return "CM" + converter(input - 900);
-    } else {
+    } 
+    else {
       times = input / 1000;
       remainder = input % 1000;
       return "M".repeat(times) + converter(remainder);
