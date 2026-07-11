@@ -1,11 +1,11 @@
-// The connections
+//? The connections
 const inputValue = document.getElementById("number");
 const convertBtn = document.getElementById("convert-btn");
 const outputPar = document.getElementById("output");
 const outputContainer = document.querySelector(".output.container");
 const downArrow = document.querySelector(".down-arrow");
 
-// Checker fn: Input validity
+//? Checker fn: Input validity
 function isIvalidNumber(input) {
 	const regex = /[.e]/;
 	const invalidChars = input.match(regex);
@@ -24,7 +24,7 @@ function isIvalidNumber(input) {
 	}
 }
 
-// Helper fn: Converter
+//? Helper fn: Converter
 function converter(input) {
 	let times;
 	let remainder;
@@ -76,13 +76,13 @@ function converter(input) {
 	}
 }
 
-// Helper fn: Handle output elements
+//? Helper fn: Handle output elements
 const hideOutputElements = () => {
 	downArrow.classList.add("hidden");
 	outputContainer.classList.add("hidden");
 };
 
-// Main function
+//? Main function
 function arabicToRoman() {
 	const integerInput = parseInt(inputValue.value);
 	let convertedNumber;
@@ -103,7 +103,7 @@ function arabicToRoman() {
 	inputValue.value = "";
 }
 
-// Event listeners
+//? Event listeners
 convertBtn.addEventListener("click", arabicToRoman);
 
 inputValue.addEventListener("keydown", (e) => {
