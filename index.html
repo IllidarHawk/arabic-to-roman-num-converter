@@ -1,30 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Arabic to Roman numerals converter</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap"
-     rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanchenjunga&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <h1 class="title">
-        <span id="from-to">Arabic to Roman</span><br />
-        <span id="functionality">numerals converter</span>
-    </h1>
-      <div class="input container">
-        <label for="number">Integer to convert:</label>
-        <input id="number" type="number" required />
-        <button type="button" id="convert-btn"> Convert</button>
-      </div>
-    <div class="down-arrow hidden"></div>
-    <div class="output container hidden">
-      <p id="output"></p>
-    </div>
-  <script src="script.js"></script>
-  </body>
-</html> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Arabic to Roman numerals converter</title>
+		<link rel="stylesheet" href="styles.css" />
+
+		<!--* Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kanchenjunga&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<h1 class="title">
+			<span id="from-to">Arabic to Roman</span><br />
+			<span id="functionality">numerals converter</span>
+		</h1>
+
+		<!-- * Form -->
+		<div class="input container">
+			<label for="number">Integer to convert:</label>
+			<input id="number" type="number" required />
+			<button type="button" id="convert-btn">Convert</button>
+		</div>
+
+		<!-- * Output -->
+		<div class="down-arrow hidden"></div>
+		<div class="output container hidden">
+			<p id="output"></p>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
