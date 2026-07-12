@@ -1,19 +1,15 @@
-# Application form for space mission
+# Arabic to Roman number converter
 
 ## **Description**
-A space-themed webpage that incorporates form fields for the applicant to fill. At present, submission leads nowhere.
-\
-The form, intented to be a *landing page*, is being presented at the center of the screen.
+A web application where you can find the equivalent Roman number (I, II, V etc.) of an Arabic one (1, 2, 5 etc.)
 
 <a
     href="https://illidarhawk.github.io/arabic-to-roman-num-converter/"
     target="_blank">
     View page
-    </a>\
-\
-*__Fun Fact__: The project and the "ARTEMIS" name had been inspired long before NASA announced their ARTEMIS project. This is why the NASA logo is missing from the webpage*
+    </a>
 
-## Stack and features
+<!-- ## Stack and features -->
 ### **Stack**
 The project was developed during the learning path of:\
 \
@@ -25,18 +21,6 @@ The project was developed during the learning path of:\
 \
 **No AI-ready code was used**, either during the development of this project or later while working on improvements
 
-### **Features**
-✅ a variety of `input` elements\
-✅ *responsiveness* in the RWD approach
-
-
-<!-- Things to consider
-
-- Questions that audience may have:
-How does it look like?
-Is it responsive?
-Did you use AI to take ready code?
-
-How do I run it?
-locally
-link -->
+<!-- ### **Features**
+✅
+✅ -->
