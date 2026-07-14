@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,12 +11,10 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap"
-			rel="stylesheet" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Kanchenjunga&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=Kanchenjunga&display=swap"
 			rel="stylesheet" />
 	</head>
+
 	<body>
 		<h1 class="title">
 			<span id="from-to">Arabic to Roman</span><br />
@@ -23,17 +22,31 @@
 		</h1>
 
 		<!-- * Form -->
-		<div class="input container">
-			<label for="number">Integer to convert:</label>
-			<input id="number" type="number" required />
-			<button type="button" id="convert-btn">Convert</button>
-		</div>
+		<form id="converter" class="input container">
+			<label for="input-num">Integer to convert:</label>
+			<input
+				id="input-num"
+				type="number"
+				required />
+			<button
+				id="convert-btn"
+				type="button">
+					Convert
+			</button>
+		</form>
 
 		<!-- * Output -->
-		<div class="down-arrow hidden"></div>
-		<div class="output container hidden">
-			<p id="output"></p>
+		<div class="down-arrow hidden">
+			<!-- Visual arrow revealed on result -->
 		</div>
+		<output
+			class="output container hidden"
+			name="result"
+			form="converter"
+			for="input-num">
+		<!-- Display convertion's result -->
+		</output>
+
 		<script src="script.js"></script>
 	</body>
 </html>
