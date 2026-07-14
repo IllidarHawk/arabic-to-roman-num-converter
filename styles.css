@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 body {
@@ -7,13 +9,13 @@ body {
 	background-color: #3b1f1f;
 }
 
-/* Form + Output containers, Heading */
+/* Form + Output, Heading width */
 
 .container,
 .title {
 	min-width: 300px;
 	width: 60%;
-	max-width: 450px;
+	max-width: 470px;
 	margin-inline: auto;
 }
 
@@ -21,8 +23,8 @@ body {
 	padding: 15px 5px;
 	margin-block: 180px 0px;
 	font-family: Tagesschrift;
-	color: #ffd700;
 	line-height: 40px;
+	color: #ffd700;
 }
 
 .title > #from-to {
@@ -35,23 +37,27 @@ body {
 
 /* About form */
 
-.input.container {
+form {
 	margin-block: 30px 40px;
 	padding: 30px 0 35px;
-	background: beige;
+	background-color: beige;
 	border: 3px solid #ffd700;
 	border-radius: 5px;
 }
 
 label {
-	color: #2f2f2f;
 	font-family: Kanchenjunga;
 	font-size: 18px;
+	color: #2f2f2f;
 }
 
-input#number {
+input,
+button {
+	width: 50%;
+}
+
+input {
 	display: block;
-	width: 48%;
 	margin: 10px auto 25px;
 	padding: 5px;
 	background-color: beige;
@@ -60,24 +66,24 @@ input#number {
 }
 
 button {
-	width: 50%;
 	padding: 5px 0 7px;
-	font-family: Kanchenjunga;
-	font-size: inherit;
-	color: #2f2f2f;
 	background: linear-gradient(white, #ffc200 90%);
 	border: 1px solid #ffc300;
-}
+	font-family: Kanchenjunga;
+	font-size: 15px;
+	color: #2f2f2f;
 
-button:hover {
-	cursor: pointer;
-	background: linear-gradient(white, #ffc300 70%);
+	&:hover {
+		cursor: pointer;
+		background: linear-gradient(white, #ffc300 70%);
+	}
 }
 
 /* About output */
 
 .down-arrow {
 	margin-inline: auto;
+	margin-bottom: 15px;
 	width: 0;
 	height: 0;
 	border-left: 50px solid transparent;
@@ -85,10 +91,9 @@ button:hover {
 	border-top: 30px solid beige;
 }
 
-.output.container {
-	margin-block: 35px;
+output {
+	margin-top: 50px;
 	padding: 5px 15px;
-	max-width: 470px;
 	background-color: #ffc300;
 	font-family: Kanchenjunga;
 	font-size: 20px;
