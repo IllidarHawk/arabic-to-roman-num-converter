@@ -1,8 +1,7 @@
 // The connections
-const inputValue = document.getElementById("number");
+const inputValue = document.getElementById("input-num");
 const convertBtn = document.getElementById("convert-btn");
-const outputPar = document.getElementById("output");
-const outputContainer = document.querySelector(".output.container");
+const output = document.querySelector(".output");
 const downArrow = document.querySelector(".down-arrow");
 
 // Checker fn: Input validity
@@ -79,7 +78,7 @@ function converter(input) {
 // Helper fn: Handle output elements
 const hideOutputElements = () => {
 	downArrow.classList.add("hidden");
-	outputContainer.classList.add("hidden");
+	output.classList.add("hidden");
 };
 
 // Main function
@@ -95,10 +94,10 @@ function arabicToRoman() {
 
 	/// Convert and output
 	convertedNumber = converter(integerInput);
-	outputPar.innerText = `'${inputValue.value}' equals '${convertedNumber}'`;
+	output.innerText = `'${inputValue.value}' equals '${convertedNumber}'`;
 
 	downArrow.classList.remove("hidden");
-	outputContainer.classList.remove("hidden");
+	output.classList.remove("hidden");
 
 	inputValue.value = "";
 }
