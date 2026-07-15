@@ -1,26 +1,25 @@
 // The connections
-const inputValue = document.getElementById("input-num");
+const numInput = document.getElementById("input-num");
 const convertBtn = document.getElementById("convert-btn");
 const output = document.querySelector(".output");
 const downArrow = document.querySelector(".down-arrow");
 
 // Checker fn: Input validity
-function isIvalidNumber(input) {
+function isValidNumber(input) {
+	/// Unwanted chars: no decimals. no 'e' - numeracally valid input
 	const regex = /[.e]/;
 	const invalidChars = input.match(regex);
 
-	if (input === "" || invalidChars) {
-		alert("Please enter a valid number");
-		return true;
-	} else if (input <= 0) {
-		alert("Please enter a number greater than or equal to 1");
-		return true;
-	} else if (input > 3999) {
-		alert("Please enter a number less than or equal to 3999");
-		return true;
-	} else {
+	/// If invalid
+	if (invalidChars || input === "" || input <= 0 || input > 3999) {
+		hideOutputElements();
+		alert("Accepted range: integers 1 - 3999");
 		return false;
 	}
+
+	// If not invalid
+	return true;
+
 }
 
 // Helper fn: Converter
@@ -83,29 +82,28 @@ const hideOutputElements = () => {
 
 // Main function
 function arabicToRoman() {
-	const integerInput = parseInt(inputValue.value);
+	const userInput = numInput.value;
 	let convertedNumber;
 
-	/// If invalid input
-	if (isIvalidNumber(inputValue.value)) {
-		hideOutputElements();
+	/// If invalid input end
+	if (!isValidNumber(userInput)) {
 		return;
 	}
 
 	/// Convert and output
-	convertedNumber = converter(integerInput);
-	output.innerText = `'${inputValue.value}' equals '${convertedNumber}'`;
+	convertedNumber = converter(userInput);
+	output.innerText = `'${userInput}' equals '${convertedNumber}'`;
 
 	downArrow.classList.remove("hidden");
 	output.classList.remove("hidden");
 
-	inputValue.value = "";
+	userInput = "";
 }
 
 // Event listeners
 convertBtn.addEventListener("click", arabicToRoman);
 
-inputValue.addEventListener("keydown", (e) => {
+numInput.addEventListener("keydown", (e) => {
 	if (e.key === "Enter") {
 		arabicToRoman();
 	}
